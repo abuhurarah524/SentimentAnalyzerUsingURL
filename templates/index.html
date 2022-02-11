@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sentiment Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+   
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="http://use.fontawsome.com/releases/v5.0.8/js/all.js"></script>
+
+    
+
+</head>
+
+<body style="background-image:url(https://www.bigboytoyz.com/theme/BBT/img/gurgaon/home/09.jpg)"
+background-size: cover;
+>
+<!-- Main div -->
+<div class="container mt-5 mb-5">
+    <div class="row">
+
+        <!-- Left Card for Project Introduction -->
+        <div class="card col-lg-7 text-  center" style="color: white; background: rgba(0, 0, 0, 0.7);">
+            <h1 class="m-5">
+                <strong>Sentiment Analysis Prediction</strong>
+              </h1>            
+              <!-- Salutaion -->
+              <p class="ml-5" style="font-weight: bolder; color: green; text-align: left">
+                                  Hi !</p>
+              
+              <!-- Instructions -->
+              <ul class="ml-4 mr-4" style="text-align: justify"> 
+                <li>The main aim of this project is to perform Sentiment Analysis</li>
+              </ul>
+        
+              <!-- Read Instructions button -->
+              <button class="btn btn-secondary mt-4" style="width: 200px; margin-left: 50px; margin-bottom: 50px" data-toggle="modal" data-target="#instructionmodal">Read Instructions
+              </button>
+        </div>
+ 
+        <!-- Right Card for System Inputs -->
+        <div class="col-lg-5 text-center" style="background: rgba(247, 223, 227, 0.7)">
+            <div>
+                <h2 class="m-5" style="color: black"><strong>URL</strong></h2>
+              </div>
+              
+              <div id="inputs-form">
+                <form action="/sentiment_analysis_prediction" method="POST" enctype="multipart/form-data" class="mt-5">
+              
+              <!-- URL  -->
+              <div class="form-group row">
+                <label class="col-lg-4 col-4 offset-lg-1" style="font-weight: bolder; font-size: large;">URL</label>
+                <div class="col-lg-6 col-xl-5 col-6">
+                    <input name="text" id="text" type="text" placeholder="Enter URL here:" style="background-color: rgb(0, 0, 0, 0.5);
+                    border-width: 3px;
+                    border-color: #f0526c;
+                    color: #f8f9fa;
+                    height: 40px;
+                    font-size: 18px;
+                    " onchange="checkSelection(this)" required >
+                </div>
+            </div>
+              
+              
+              <!-- Predict Button -->
+              <div class="form-group row mt-5">
+                 <div class="col-lg-8 offset-lg-2 col-9 offset-1 mb-5">
+                    <button type="submit" class="btn btn-success" id="calculateButton" style="width: 100%">Predict
+                    </button>
+                 </div>
+              </div>
+
+             
+
+
+
+
+              <!-- Instruction Modal -->
+              <div class="modal fade" id="instructionmodal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                            <h4 class="modal-title" style="margin-left: 35%">
+                                <strong>Instructions</strong>
+                            </h4>
+                            
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>                            
+                          </div>
+                         
+                            
+                            
+                              <!-- Instruction Heading -->
+<div class="w-100 text-center" style="background: #009cff; color: white; height: 50px">
+    <h5 style="padding-top: 10px">Input Attributes Details</h5>
+</div>
+
+<!-- Collapsable System Input Attributes in Instruction Modal -->
+<div id="accordion">
+    <div class="card mt-2" style="background: rgb(173, 170, 170)">
+        <div class="card-header" id="URLheading" style="display: inline-flex;height: 40px;align-content: center;cursor: pointer;" data-toggle="collapse" data-target="#URLcollapse" aria-expanded="false"
+            aria-controls="collapseOne">
+            <i class="fa fa-plus-circle">
+                <b class="ml-3" style="font-family: sans-serif">URL - URL</b>
+            </i>
+        </div>
+        <div id="URLcollapse" class="collapse" aria-labelledby="URLheading"
+            style="background: white" data-parent="#accordion">
+            <div class="card-body">
+                Provide only URL  :
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="modal-body">
+        <div class="w-100 text-center mt-3" style="background: #009cff; color: white; height: 50px">
+            <h5 style="padding-top: 10px">Steps to Follow</h5>
+        </div>
+        
+        <!-- Steps of Prediction -->
+        <div class="mt-3 ml-3">
+            <span style="font-weight: bolder">Step 1 : </span> Provide URL
+
+            <span style="font-weight: bolder">Step 2 : </span> Click on
+            <span style="font-weight: bolder; color: #009cff">Predict</span>
+            Button<br />
+            <span style="font-weight: bolder">Step 3 : </span> You will Sentiment Analysis
+           
+        </div>
+
+</div>
+
+
+        
+        
+       
+
+</div>
+
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Display of predicted result -->
+<div class="result-box mt-3">
+    <p id="result", ><span style="font-weight: bolder;font-size: 25px ;color: #dd142f">{{prediction_text}}</span></p>
+</div>
+
+                 </form>
+              </div>
+              
+
+        </div>
+ 
+      </div>
+ 
+ 
+
+
+
+</body>
+<script>
+    // Making dropdown border as green when the value of attribute is changed
+    function checkSelection(element) {
+    if (element.value != "") {
+        element.style.borderColor = "green"; //change color to green
+    }
+}
+    // Handle Present_Price collapse on click
+    $("#URLheading").click(function () {
+        if ($("#URLheading").attr("aria-expanded") == "false") {
+            $("#URLheading i").removeClass("fa-plus-circle");
+            $("#URLheading i").addClass("fa-minus-circle");
+        }
+        if ($("#URLheading").attr("aria-expanded") == "true") {
+            $("#URLheading i").removeClass("fa-minus-circle");
+            $("#URLheading i").addClass("fa-plus-circle");
+        }
+    });
+    
+   
+  
+    
+    // Handling of Result modal to be displayed
+    window.onload = function () {
+        if (document.getElementById("result").innerText) {
+            $("#resultmodal").modal("show");
+        }
+    };
+    
+    
+    </script>
+</html>
